@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BotsUp</string>
+
+    <!--ViewPager Fragment-->
+    <string name="camera_fragment">Camera section</string>
+    <string name="chats_fragment">Chats section</string>
+    <string name="status_fragment">Status section</string>
+    <string name="calls_fragment">Calls section</string>
+
 </resources>

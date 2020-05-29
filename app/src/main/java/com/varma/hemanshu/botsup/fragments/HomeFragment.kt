@@ -8,21 +8,16 @@ import androidx.fragment.app.Fragment
 import com.varma.hemanshu.botsup.R
 
 /**
- *  Fragment for Chats Section
+ *  Fragment for Home Screen
  */
-class ChatFragment : Fragment() {
+class HomeFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat, container, false)
-    }
-
-    //Instance used by ViewPager to inflate this Fragment
-    companion object {
-        fun getInstance() = ChatFragment()
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
 }

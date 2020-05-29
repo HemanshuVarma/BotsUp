@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/chatFragment">
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/chatFragment"
-        android:name="com.varma.hemanshu.botsup.fragments.ChatFragment"
-        android:label="fragment_chat"
-        tools:layout="@layout/fragment_chat" />
+        android:id="@+id/homeFragment"
+        android:name="com.varma.hemanshu.botsup.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 </navigation>

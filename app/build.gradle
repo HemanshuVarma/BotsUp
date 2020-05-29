@@ -41,6 +41,7 @@ dependencies {
     implementation "com.google.android.material:material:$material_version"
     implementation "android.arch.navigation:navigation-fragment-ktx:$navigationVersion"
     implementation "android.arch.navigation:navigation-ui-ktx:$navigationVersion"
+    implementation "androidx.viewpager2:viewpager2:$viewpager_version"
 
     //Test Dependencies
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

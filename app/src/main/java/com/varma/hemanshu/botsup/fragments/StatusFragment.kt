@@ -8,21 +8,21 @@ import androidx.fragment.app.Fragment
 import com.varma.hemanshu.botsup.R
 
 /**
- *  Fragment for Chats Section
+ *  Fragment for Status Section
  */
-class ChatFragment : Fragment() {
+class StatusFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat, container, false)
+        return inflater.inflate(R.layout.fragment_status, container, false)
     }
 
     //Instance used by ViewPager to inflate this Fragment
     companion object {
-        fun getInstance() = ChatFragment()
+        fun getInstance() = StatusFragment()
     }
 
 }
