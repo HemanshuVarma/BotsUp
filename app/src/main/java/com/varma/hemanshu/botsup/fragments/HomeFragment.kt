@@ -30,9 +30,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Setting up adapter with chats section as start position
         val homeViewPagerAdapter =
             HomeViewPagerAdapter(requireActivity(), Constants.VIEW_PAGER_ITEMS_COUNT)
         binding.homeViewpager.adapter = homeViewPagerAdapter
+        binding.homeViewpager.currentItem = Constants.DEFAULT_PAGE
 
     }
 
