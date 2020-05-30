@@ -52,4 +52,10 @@ class HomeFragment : Fragment() {
 
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+
+        //Removing pager callback when fragment is destroyed
+        binding.homeViewpager.unregisterOnPageChangeCallback(homePageChangeCallback)
+    }
 }
