@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="chat_item"
+            type="com.varma.hemanshu.botsup.Chat" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/chat_profile"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textAppearance="?textAppearanceHeadline6"
+            app:layout_constraintStart_toEndOf="@+id/chat_profile"
+            app:layout_constraintTop_toTopOf="@+id/chat_profile"
+            tools:text="Hemanshu Varma" />
+
+        <TextView
+            android:id="@+id/chat_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintBottom_toBottomOf="@+id/chat_profile"
+            app:layout_constraintStart_toStartOf="@id/chat_name"
+            app:layout_constraintTop_toBottomOf="@+id/chat_name"
+            tools:text="Hey there! I'm using BotsUp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="@id/chat_name"
+            app:layout_constraintTop_toBottomOf="@id/chat_message" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

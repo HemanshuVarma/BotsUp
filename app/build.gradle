@@ -15,6 +15,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -54,5 +55,6 @@ dependencies {
     implementation "androidx.viewpager2:viewpager2:$viewpager_version"
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
     implementation "com.jakewharton.timber:timber:$timber_version"
+    implementation "com.mikhaellopez:circularimageview:$circularimageview_version"
 
 }
