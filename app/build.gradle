@@ -33,6 +33,16 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Test Dependencies
+    implementation "androidx.legacy:legacy-support-v4:$legacySupport_version"
+    testImplementation "junit:junit:$test_junit_version"
+
+    //Android Test Dependencies
+    androidTestImplementation "androidx.test.ext:junit:$androidTest_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+
+    //Application dependencies
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$appCompat_version"
     implementation "androidx.core:core-ktx:$coreKtx_version"
@@ -43,11 +53,4 @@ dependencies {
     implementation "android.arch.navigation:navigation-ui-ktx:$navigationVersion"
     implementation "androidx.viewpager2:viewpager2:$viewpager_version"
 
-    //Test Dependencies
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation "junit:junit:$test_junit_version"
-
-    //Android Test Dependencies
-    androidTestImplementation "androidx.test.ext:junit:$androidTest_junit_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
 }

@@ -7,4 +7,12 @@
     <string name="status_fragment">Status section</string>
     <string name="calls_fragment">Calls section</string>
 
+    <!--Array for Names in TabLayout-->
+    <string-array name="homepage_screen_names">
+        <item>Camera</item>
+        <item>Chats</item>
+        <item>Status</item>
+        <item>Calls</item>
+    </string-array>
+
 </resources>

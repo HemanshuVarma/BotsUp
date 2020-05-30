@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayoutMediator
 import com.varma.hemanshu.botsup.Constants
+import com.varma.hemanshu.botsup.R
 import com.varma.hemanshu.botsup.adapters.HomeViewPagerAdapter
 import com.varma.hemanshu.botsup.databinding.FragmentHomeBinding
 
@@ -41,15 +43,24 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //Setting up adapter with chats section as start position and attaching page change listener
+        //Reference to ViewPager
         val homeViewPagerAdapter =
             HomeViewPagerAdapter(requireActivity(), Constants.VIEW_PAGER_ITEMS_COUNT)
         binding.homeViewpager.apply {
+            //Setting up adapter
             adapter = homeViewPagerAdapter
-            currentItem = Constants.DEFAULT_PAGE
-            registerOnPageChangeCallback(homePageChangeCallback)
-        }
 
+            //Setting Chat screen as Default screen
+            currentItem = Constants.DEFAULT_PAGE
+
+            //Attaching page change callback
+            registerOnPageChangeCallback(homePageChangeCallback)
+
+            //Binding ViewPager with TabLayout to set names/icon
+            TabLayoutMediator(binding.homeTabLayout, binding.homeViewpager) { tab, position ->
+                tab.text = resources.getStringArray(R.array.homepage_screen_names)[position]
+            }.attach()
+        }
     }
 
     override fun onDestroy() {
