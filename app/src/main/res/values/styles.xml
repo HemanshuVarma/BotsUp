@@ -6,6 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/BotsUpAppBarStyle</item>
+    </style>
+
+    <style name="BotsUpAppBarStyle" parent="Widget.MaterialComponents.ActionBar.Solid">
+        <!-- Remove the shadow below the app bar -->
+        <item name="elevation">0dp</item>
     </style>
 
 </resources>
