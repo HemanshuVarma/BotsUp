@@ -11,6 +11,8 @@ buildscript {
         material_version = '1.1.0'
         navigationVersion = '2.2.2'
         viewpager_version = '1.0.0'
+        recyclerview_version = '1.1.0'
+        timber_version = '4.7.1'
 
         //test dependencies version
         test_junit_version = '4.12'

@@ -1,7 +1,6 @@
 package com.varma.hemanshu.botsup.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +11,7 @@ import com.varma.hemanshu.botsup.Constants
 import com.varma.hemanshu.botsup.R
 import com.varma.hemanshu.botsup.adapters.HomeViewPagerAdapter
 import com.varma.hemanshu.botsup.databinding.FragmentHomeBinding
+import timber.log.Timber
 
 /**
  *  Fragment for Home Screen
@@ -24,7 +24,7 @@ class HomeFragment : Fragment() {
     private val homePageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
             //Add implementation as per page change using position
-            Log.i("HomeFragment", "Position is $position")
+            Timber.i("Position is $position")
         }
     }
 

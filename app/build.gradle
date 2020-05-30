@@ -52,5 +52,7 @@ dependencies {
     implementation "android.arch.navigation:navigation-fragment-ktx:$navigationVersion"
     implementation "android.arch.navigation:navigation-ui-ktx:$navigationVersion"
     implementation "androidx.viewpager2:viewpager2:$viewpager_version"
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+    implementation "com.jakewharton.timber:timber:$timber_version"
 
 }
