@@ -2,6 +2,8 @@
 <resources>
     <color name="colorPrimary">#075E54</color>
     <color name="colorPrimaryDark">#004D40</color>
+    <color name="colorSecondary">#25D366</color>
+    <color name="colorOnSecondary">@color/colorWhite</color>
     <color name="colorAccent">#25D366</color>
     <color name="colorDeepOrange">#FF7043</color>
     <color name="colorRed">#F44336</color>
