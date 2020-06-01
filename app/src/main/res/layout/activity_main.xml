@@ -22,7 +22,8 @@
                 android:layout_height="?actionBarSize"
                 android:elevation="0dp"
                 app:elevation="0dp"
-                app:title="@string/app_name" />
+                app:title="@string/app_name"
+                app:titleTextColor="@color/colorWhite" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <fragment

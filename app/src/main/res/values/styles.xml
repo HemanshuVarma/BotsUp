@@ -9,6 +9,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorOnSecondary">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorWhite</item>
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
 
