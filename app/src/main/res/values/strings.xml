@@ -7,6 +7,10 @@
     <string name="status_fragment">Status section</string>
     <string name="calls_fragment">Calls section</string>
 
+    <!--Menu Items-->
+    <string name="menu_add_item">Add item</string>
+    <string name="menu_about">About</string>
+
     <!--Array for Names in TabLayout-->
     <string-array name="homepage_screen_names">
         <item>Camera</item>

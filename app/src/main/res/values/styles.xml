@@ -5,16 +5,13 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorWhite</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorOnSecondary">@color/colorWhite</item>
-        <item name="actionBarStyle">@style/BotsUpAppBarStyle</item>
-        <item name="fontFamily">@font/helvetica_neue_medium</item>
-    </style>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
 
-    <style name="BotsUpAppBarStyle" parent="Widget.MaterialComponents.ActionBar.Solid">
-        <!-- Remove the shadow below the app bar -->
-        <item name="elevation">0dp</item>
     </style>
 
 </resources>

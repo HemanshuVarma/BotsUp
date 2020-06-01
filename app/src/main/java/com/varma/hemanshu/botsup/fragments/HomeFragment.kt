@@ -1,10 +1,10 @@
 package com.varma.hemanshu.botsup.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.varma.hemanshu.botsup.Constants
@@ -37,6 +37,9 @@ class HomeFragment : Fragment() {
         // Bind and Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater)
 
+        //Setting Overflow menu
+        setHasOptionsMenu(true)
+
         return binding.root
     }
 
@@ -61,6 +64,20 @@ class HomeFragment : Fragment() {
                 tab.text = resources.getStringArray(R.array.homepage_screen_names)[position]
             }.attach()
         }
+    }
+
+    //Inflating overflow menu
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu_chat, menu)
+    }
+
+    //Handle when overflow item is clicked
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(
+            item,
+            view!!.findNavController()
+        ) || super.onOptionsItemSelected(item)
     }
 
     override fun onDestroy() {
