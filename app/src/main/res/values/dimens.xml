@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="tab_height">3dp</dimen>
+    <!--Padding/Margin dimens-->
     <dimen name="margin_small">8dp</dimen>
     <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+
+    <!--Other dimens-->
+    <dimen name="tab_height">3dp</dimen>
     <dimen name="profile_size">65dp</dimen>
+    <dimen name="logo_size">125dp</dimen>
 </resources>

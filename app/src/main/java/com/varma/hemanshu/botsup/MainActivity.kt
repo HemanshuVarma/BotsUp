@@ -1,8 +1,10 @@
 package com.varma.hemanshu.botsup
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -31,6 +33,18 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
         appBarConfiguration = AppBarConfiguration(navController.graph, null)
+
+        setUpNavigationListener(navController)
+    }
+
+    //Hiding Appbar when navigating to About Fragment
+    private fun setUpNavigationListener(navController: NavController) {
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.aboutFragment) {
+                binding.appBarLayout.visibility = View.GONE
+            } else
+                binding.appBarLayout.visibility = View.VISIBLE
+        }
     }
 
     //Handled when up button is pressed

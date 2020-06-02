@@ -5,16 +5,53 @@
     android:id="@+id/aboutFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/app_wallpaper"
     tools:context=".fragments.AboutFragment">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/about_app_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
         android:text="@string/app_name"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        android:textColor="@color/colorWhite"
+        app:fontFamily="@font/helvetica_neue_medium"
+        app:layout_constraintBottom_toTopOf="@+id/about_version_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/about_version_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textColor="@color/colorNotHighlighted"
+        app:layout_constraintBottom_toTopOf="@+id/about_app_logo_image_view"
+        app:layout_constraintEnd_toEndOf="@+id/about_app_name_text_view"
+        app:layout_constraintStart_toStartOf="@+id/about_app_name_text_view"
+        tools:text="Version: 1.0" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/about_app_logo_image_view"
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="@string/copyright_notice"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textColor="@color/colorNotHighlighted"
+        app:layout_constraintEnd_toEndOf="@+id/about_app_logo_image_view"
+        app:layout_constraintStart_toStartOf="@+id/about_app_logo_image_view"
+        app:layout_constraintTop_toBottomOf="@id/about_app_logo_image_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
