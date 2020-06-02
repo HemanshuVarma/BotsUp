@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         //Setting up material toolbar
         toolbar = binding.toolbar
         setSupportActionBar(toolbar)
+        binding.appBarLayout.bringToFront()
 
         //Binding Toolbar and Navigation Graph to sync
         val navController = this.findNavController(R.id.myNavHostFragment)
