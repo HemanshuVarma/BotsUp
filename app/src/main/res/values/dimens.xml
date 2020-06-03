@@ -9,4 +9,5 @@
     <dimen name="tab_height">3dp</dimen>
     <dimen name="profile_size">65dp</dimen>
     <dimen name="logo_size">125dp</dimen>
+    <dimen name="anim_height">300dp</dimen>
 </resources>

@@ -22,5 +22,6 @@
     <!--About Section Strings-->
     <string name="app_version">Version %s</string>
     <string name="copyright_notice">\u00A9 2020 Hemanshu Varma</string>
+    <string name="notify">Notify</string>
 
 </resources>

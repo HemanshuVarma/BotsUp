@@ -6,13 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".fragments.CameraFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/camera_fragment"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/coming_soon_anim"
+        android:layout_width="@dimen/anim_height"
+        android:layout_height="@dimen/anim_height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ape_coding_anim" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/notify_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="@string/notify"
+        app:layout_constraintEnd_toEndOf="@+id/coming_soon_anim"
+        app:layout_constraintStart_toStartOf="@+id/coming_soon_anim"
+        app:layout_constraintTop_toBottomOf="@+id/coming_soon_anim" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
