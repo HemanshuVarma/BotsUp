@@ -61,7 +61,8 @@ fun triggerNotification(
 
     // Setting properties for notification
     val builder = NotificationCompat.Builder(appContext, channelId)
-        .setSmallIcon(R.mipmap.ic_launcher_foreground)
+        .setSmallIcon(R.mipmap.ic_launcher_round)
+        .setColor(appContext.resources.getColor(R.color.colorPrimary))
         .setContentTitle(title)
         .setContentText(message)
         .setAutoCancel(true)

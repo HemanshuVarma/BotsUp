@@ -1,5 +1,6 @@
 package com.varma.hemanshu.botsup.utils
 
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Build
@@ -8,6 +9,8 @@ import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.FirebaseMessaging
+import com.varma.hemanshu.botsup.Constants
+import com.varma.hemanshu.botsup.R
 import timber.log.Timber
 import java.net.HttpURLConnection
 import java.net.URL
@@ -30,14 +33,31 @@ class FirebaseUtils {
          * A method to subscribe to topic for FCM
          * @param topic Name fo topic to subscribe on
          */
-        fun subscribeTopic(topic: String) {
+        fun subscribeTopic(context: Context, topic: String) {
             FirebaseMessaging.getInstance().subscribeToTopic(topic)
                 .addOnCompleteListener { task ->
-                    var message = "Success subscribing to $topic"
+                    val message: String
+                    val notificationTitle: String
+                    val notificationDescription: String
                     if (!task.isSuccessful) {
                         message = "Failed subscribing to $topic"
+                        notificationTitle = Constants.LOCAL_NOTIFY_TITLE_FAIL
+                        notificationDescription = Constants.LOCAL_NOTIFY_DESCRIPTION_FAIL
+                    } else {
+                        message = "Success subscribing to $topic"
+                        notificationTitle = Constants.LOCAL_NOTIFY_TITLE_SUCCESS
+                        notificationDescription = Constants.LOCAL_NOTIFY_DESCRIPTION_SUCCESS
                     }
+                    triggerNotification(
+                        context,
+                        context.getString(R.string.local_notification_channel_id),
+                        notificationTitle,
+                        notificationDescription,
+                        null
+                    )
                     Timber.i(message)
+                }.addOnFailureListener {
+                    Timber.e("Failed due to ${it.message}")
                 }
         }
 
