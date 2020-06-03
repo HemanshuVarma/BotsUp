@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     compileSdkVersion 29
@@ -56,6 +58,10 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
     implementation "com.jakewharton.timber:timber:$timber_version"
     implementation "com.mikhaellopez:circularimageview:$circularimageview_version"
-    implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation "com.airbnb.android:lottie:$lottie_version"
+    implementation "com.google.firebase:firebase-analytics:$analytics_version"
+    implementation "com.google.firebase:firebase-crashlytics:$crashlytics_version"
+    implementation "com.google.firebase:firebase-messaging:$messaging_version"
+    implementation "com.google.firebase:firebase-firestore-ktx:$firestore_version"
 
 }
