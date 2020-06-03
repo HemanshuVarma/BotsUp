@@ -24,4 +24,12 @@
     <string name="copyright_notice">\u00A9 2020 Hemanshu Varma</string>
     <string name="notify">Notify</string>
 
+    <!--Notification Channels-->
+    <string name="local_notification_channel_id">notify_local</string>
+    <string name="local_notification_channel_name">Notify Local</string>
+    <string name="local_notification_channel_description">Channel for local notifications</string>
+    <string name="fcm_notification_channel_id">notify_fcm</string>
+    <string name="fcm_notification_channel_name">Notify FCM</string>
+    <string name="fcm_notification_channel_description">Channel for FCM notifications</string>
+
 </resources>

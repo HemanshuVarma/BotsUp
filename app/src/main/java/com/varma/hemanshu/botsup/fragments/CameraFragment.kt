@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.varma.hemanshu.botsup.R
 import kotlinx.android.synthetic.main.fragment_camera.*
-import timber.log.Timber
 
 /**
  *  Fragment for Camera Section
@@ -27,7 +26,6 @@ class CameraFragment : Fragment() {
 
         //Playing animation only when the fragment is active
         coming_soon_anim.playAnimation()
-        Timber.i("Animation Resumed")
     }
 
     override fun onPause() {
@@ -35,7 +33,6 @@ class CameraFragment : Fragment() {
 
         //Stopping animation only when the fragment is inactive
         coming_soon_anim.pauseAnimation()
-        Timber.i("Animation Paused")
     }
 
     //Instance used by ViewPager to inflate this Fragment
