@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.varma.hemanshu.botsup.R
 import com.varma.hemanshu.botsup.adapters.ChatAdapter
@@ -23,6 +24,7 @@ class ChatFragment : Fragment() {
     ): View? {
 
         binding = FragmentChatBinding.inflate(inflater)
+
         // Inflate the layout for this fragment
         return binding.root
     }
@@ -30,11 +32,17 @@ class ChatFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Setting the adapter
         val adapter = ChatAdapter()
         binding.chatList.adapter = adapter
         val items = createDataSet()
         adapter.data = items
         Timber.i("List submitted is $items")
+
+        //Setting click listener on FAB
+        binding.newChat.setOnClickListener {
+            Toast.makeText(context, getString(R.string.new_chat), Toast.LENGTH_SHORT).show()
+        }
     }
 
     //Instance used by ViewPager to inflate this Fragment

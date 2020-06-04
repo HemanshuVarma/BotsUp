@@ -24,6 +24,12 @@
     <string name="copyright_notice">\u00A9 2020 Hemanshu Varma</string>
     <string name="notify">Notify</string>
 
+    <!--Calls Section Strings-->
+    <string name="calls_info">Start making calls and see the magic</string>
+
+    <!--Chat Section Strings-->
+    <string name="new_chat">Start new conversation</string>
+
     <!--Notification Channels-->
     <string name="local_notification_channel_id">notify_local</string>
     <string name="local_notification_channel_name">Notify Local</string>

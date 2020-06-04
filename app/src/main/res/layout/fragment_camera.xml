@@ -14,8 +14,8 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/coming_soon_anim"
-            android:layout_width="@dimen/anim_height"
-            android:layout_height="@dimen/anim_height"
+            android:layout_width="@dimen/anim_height_normal"
+            android:layout_height="@dimen/anim_height_normal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
