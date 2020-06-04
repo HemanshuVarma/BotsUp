@@ -6,13 +6,121 @@
     android:layout_height="match_parent"
     tools:context=".fragments.StatusFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/status_header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/status_fragment"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/status_profile"
+            android:layout_width="@dimen/profile_size"
+            android:layout_height="@dimen/profile_size"
+            app:civ_border_color="@color/colorStatusBorder"
+            app:civ_border_width="@dimen/status_border_width"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/status_header_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="@string/status_header_title"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/status_header_sub_title_text_view"
+            app:layout_constraintStart_toEndOf="@+id/status_profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/status_header_sub_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_header_sub_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/status_header_title_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/status_header_title_text_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/updates_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/colorLightGray"
+        android:paddingStart="@dimen/margin_normal"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_normal"
+        android:paddingBottom="@dimen/margin_small"
+        android:text="@string/status_updates_header"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/status_header" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/status_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updates_text_view">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/user_status_profile"
+            android:layout_width="@dimen/profile_size"
+            android:layout_height="@dimen/profile_size"
+            app:civ_border_color="@color/colorStatusBorder"
+            app:civ_border_width="@dimen/status_border_width"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/user_status_header_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/user_status_header_sub_title_text_view"
+            app:layout_constraintStart_toEndOf="@+id/user_status_profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/user_status_header_sub_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_status_time"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/user_status_header_title_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/user_status_header_title_text_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/margin_normal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/margin_normal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

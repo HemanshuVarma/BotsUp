@@ -10,4 +10,6 @@
     <color name="colorWhite">@android:color/white</color>
     <color name="colorBlack">@android:color/black</color>
     <color name="colorNotHighlighted">#B2DFDB</color>
+    <color name="colorStatusBorder">#4DB6AC</color>
+    <color name="colorLightGray">#F5F5F5</color>
 </resources>

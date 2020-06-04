@@ -11,4 +11,5 @@
     <dimen name="logo_size">125dp</dimen>
     <dimen name="anim_height_normal">300dp</dimen>
     <dimen name="anim_height_small">150dp</dimen>
+    <dimen name="status_border_width">3dp</dimen>
 </resources>

@@ -30,6 +30,12 @@
     <!--Chat Section Strings-->
     <string name="new_chat">Start new conversation</string>
 
+    <!--Status Section Strings-->
+    <string name="status_header_title">My Status</string>
+    <string name="status_header_sub_title">Tap to add status update</string>
+    <string name="status_updates_header">Status updates</string>
+    <string name="dummy_status_time">Today, 12:00 am</string>
+
     <!--Notification Channels-->
     <string name="local_notification_channel_id">notify_local</string>
     <string name="local_notification_channel_name">Notify Local</string>
