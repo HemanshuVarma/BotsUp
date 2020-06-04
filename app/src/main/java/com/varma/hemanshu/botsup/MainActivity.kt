@@ -62,9 +62,9 @@ class MainActivity : AppCompatActivity() {
      * if yes, then create channel(s) for notification
      */
     private fun isFirstLaunch() {
-        val isFirstLaunch = prefInstance.isFirstLaunch()
-        Timber.i("First Launch $isFirstLaunch")
-        if (isFirstLaunch) {
+        val isFirstLaunch = prefInstance.getBooleanValue(Constants.PREF_IS_FIRST_LAUNCH)
+        Timber.i("First Launch ${!isFirstLaunch}")
+        if (!isFirstLaunch) {
 
             //Channel is required for Android Oreo and above
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
                     NotificationManager.IMPORTANCE_HIGH
                 )
             }
-            prefInstance.setIsFirstLaunch(false)
+            prefInstance.setBooleanValue(Constants.PREF_IS_FIRST_LAUNCH, true)
         }
     }
 

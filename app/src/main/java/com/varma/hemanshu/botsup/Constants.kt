@@ -11,4 +11,10 @@ object Constants {
     const val LOCAL_NOTIFY_DESCRIPTION_SUCCESS = "You'll be notified for future updates"
     const val LOCAL_NOTIFY_TITLE_FAIL = "Oops! Encountered issues..."
     const val LOCAL_NOTIFY_DESCRIPTION_FAIL = "Please retry after sometime"
+
+    //Shared Preference constants
+    const val PREF_NAME = "PREF_DB_STORE_AUTHENTICATION"
+    const val PREF_IS_FIRST_LAUNCH = "PREF_VAL_IS_FIRST_LAUNCH"
+    const val PREF_NOTIFICATION_ID = "PREF_VAL_NOTIFICATION_ID"
+    const val ADD_ONE = 1
 }
