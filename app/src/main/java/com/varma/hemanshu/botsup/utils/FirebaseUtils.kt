@@ -43,10 +43,14 @@ class FirebaseUtils {
                         message = "Failed subscribing to $topic"
                         notificationTitle = Constants.LOCAL_NOTIFY_TITLE_FAIL
                         notificationDescription = Constants.LOCAL_NOTIFY_DESCRIPTION_FAIL
+                        SharedPrefUtils.getInstance(context)
+                            .setBooleanValue(Constants.NOTIFY_UPDATES, Constants.FAIL)
                     } else {
                         message = "Success subscribing to $topic"
                         notificationTitle = Constants.LOCAL_NOTIFY_TITLE_SUCCESS
                         notificationDescription = Constants.LOCAL_NOTIFY_DESCRIPTION_SUCCESS
+                        SharedPrefUtils.getInstance(context)
+                            .setBooleanValue(Constants.NOTIFY_UPDATES, Constants.SUCCESS)
                     }
                     triggerNotification(
                         context,

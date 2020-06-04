@@ -22,10 +22,10 @@
     <!--About Section Strings-->
     <string name="app_version">Version %s</string>
     <string name="copyright_notice">\u00A9 2020 Hemanshu Varma</string>
-    <string name="notify">Notify</string>
 
-    <!--Calls Section Strings-->
-    <string name="calls_info">Start making calls and see the magic</string>
+    <!--Camera Section Strings-->
+    <string name="notify">Notify</string>
+    <string name="notifications_already_subscribed">You\'re already subscribed</string>
 
     <!--Chat Section Strings-->
     <string name="new_chat">Start new conversation</string>
@@ -35,6 +35,9 @@
     <string name="status_header_sub_title">Tap to add status update</string>
     <string name="status_updates_header">Status updates</string>
     <string name="dummy_status_time">Today, 12:00 am</string>
+
+    <!--Calls Section Strings-->
+    <string name="calls_info">Start making calls and see the magic</string>
 
     <!--Notification Channels-->
     <string name="local_notification_channel_id">notify_local</string>

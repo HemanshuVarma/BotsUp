@@ -5,6 +5,9 @@ object Constants {
     const val VIEW_PAGER_ITEMS_COUNT = 4
     const val DEFAULT_PAGE = 1
     const val TOPIC = "BU_Updates"
+    const val SUCCESS = true
+    const val FAIL = false
+    const val NOTIFY_UPDATES = "NOTIFICATION_UPDATES"
 
     //Local notification constants
     const val LOCAL_NOTIFY_TITLE_SUCCESS = "Hurayyy! You are in..."
