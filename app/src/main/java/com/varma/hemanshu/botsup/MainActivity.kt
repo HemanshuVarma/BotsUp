@@ -24,6 +24,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var prefInstance: SharedPrefUtils
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        //Setting theme to display splash when cold boot
+        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
 
         //Binding Layout
