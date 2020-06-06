@@ -4,19 +4,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.varma.hemanshu.botsup.R
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.varma.hemanshu.botsup.adapters.ChatAdapter
-import com.varma.hemanshu.botsup.data.Chat
 import com.varma.hemanshu.botsup.databinding.FragmentChatBinding
+import com.varma.hemanshu.botsup.viewmodels.ChatViewModel
 import timber.log.Timber
 
 /**
  *  Fragment for Chats Section
  */
 class ChatFragment : Fragment() {
+
     private lateinit var binding: FragmentChatBinding
+
+    private val viewModel: ChatViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,45 +28,27 @@ class ChatFragment : Fragment() {
 
         binding = FragmentChatBinding.inflate(inflater)
 
-        // Inflate the layout for this fragment
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        //Coupling viewModel
+        binding.chatViewModel = viewModel
 
         //Setting the adapter
         val adapter = ChatAdapter()
         binding.chatList.adapter = adapter
-        val items = createDataSet()
-        adapter.data = items
-        Timber.i("List submitted is $items")
 
-        //Setting click listener on FAB
-        binding.newChat.setOnClickListener {
-            Toast.makeText(context, getString(R.string.new_chat), Toast.LENGTH_SHORT).show()
-        }
+        viewModel.items.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                adapter.data = it
+                Timber.i("List submitted is $it")
+            }
+        })
+
+        // Inflate the layout for this fragment
+        return binding.root
     }
 
     //Instance used by ViewPager to inflate this Fragment
     companion object {
         fun getInstance() = ChatFragment()
-
-        fun createDataSet(): ArrayList<Chat> {
-            val list = ArrayList<Chat>()
-
-            //Adding dummy data
-            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Hey There!"))
-            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Hey There!"))
-            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Hey There!"))
-            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Hey There!"))
-            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Hey There!"))
-            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Hey There!"))
-            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Hey There!"))
-            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Hey There!"))
-            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Hey There!"))
-            return list
-        }
     }
 
 }

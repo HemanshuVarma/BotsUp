@@ -19,6 +19,8 @@ buildscript {
         crashlytics_version = '17.0.0'
         messaging_version = '20.2.0'
         firestore_version = '21.4.3'
+        lifecycle_version = '2.2.0'
+        fragment_version = '1.2.4'
 
         //test dependencies version
         test_junit_version = '4.12'

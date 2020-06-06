@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="chatViewModel"
+            type="com.varma.hemanshu.botsup.viewmodels.ChatViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,6 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_normal"
+            android:onClick="@{() -> chatViewModel.addItemToList()}"
             android:src="@drawable/icon_message_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
