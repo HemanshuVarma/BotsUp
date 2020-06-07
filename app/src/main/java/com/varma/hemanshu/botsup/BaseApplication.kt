@@ -7,6 +7,9 @@ class BaseApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Timber.plant(Timber.DebugTree())
+
+        //Avoiding logs in Production
+        if (BuildConfig.DEBUG)
+            Timber.plant(Timber.DebugTree())
     }
 }

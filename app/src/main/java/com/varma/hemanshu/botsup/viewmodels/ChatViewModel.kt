@@ -8,7 +8,7 @@ import com.varma.hemanshu.botsup.data.Chat
 import timber.log.Timber
 
 /**
- *  A Viewmodel, [ChatViewModel] for Chat items.
+ *  A ViewModel, [ChatViewModel] for Chat items.
  */
 class ChatViewModel : ViewModel() {
 
@@ -29,7 +29,7 @@ class ChatViewModel : ViewModel() {
     fun addItemToList() {
         count++
         for (i in count until count + 1) {
-            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Placeholder message :$i"))
+            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Placeholder message: $i"))
         }
         _items.value = list
     }
