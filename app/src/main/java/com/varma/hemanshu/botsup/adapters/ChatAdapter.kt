@@ -34,9 +34,7 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.ViewHolder>() {
         private val chatMessage: TextView = itemView.findViewById(R.id.chat_message)
 
         fun bind(item: Chat) {
-
-            val profile = item.profile
-            chatProfile.setImageResource(profile)
+            chatProfile.setImageResource(item.profile)
             chatName.text = item.name
             chatMessage.text = item.message
         }

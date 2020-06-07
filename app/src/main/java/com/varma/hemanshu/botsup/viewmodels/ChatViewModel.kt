@@ -29,7 +29,7 @@ class ChatViewModel : ViewModel() {
     fun addItemToList() {
         count++
         for (i in count until count + 1) {
-            list.add(Chat(R.drawable.profile, "Hemanshu Varma", "Placeholder message: $i"))
+            list.add(Chat(R.drawable.ic_user, "User name $i", "Placeholder message: $i"))
         }
         _items.value = list
     }
