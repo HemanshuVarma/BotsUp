@@ -8,7 +8,6 @@
     <string name="calls_fragment">Calls section</string>
 
     <!--Menu Items-->
-    <string name="menu_add_item">Add item</string>
     <string name="menu_about">About</string>
 
     <!--Array for Names in TabLayout-->
@@ -29,6 +28,7 @@
 
     <!--Chat Section Strings-->
     <string name="new_chat">Start new conversation</string>
+    <string name="empty_view_message">Oops! No conversations yet</string>
 
     <!--Status Section Strings-->
     <string name="status_header_title">My Status</string>

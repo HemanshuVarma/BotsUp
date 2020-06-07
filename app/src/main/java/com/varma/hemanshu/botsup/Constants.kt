@@ -8,6 +8,7 @@ object Constants {
     const val SUCCESS = true
     const val FAIL = false
     const val NOTIFY_UPDATES = "NOTIFICATION_UPDATES"
+    const val NO_ITEMS = 0
 
     //Local notification constants
     const val LOCAL_NOTIFY_TITLE_SUCCESS = "Hurayyy! You are in..."
