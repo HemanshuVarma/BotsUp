@@ -5,7 +5,6 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.varma.hemanshu.botsup.MainActivity
@@ -18,14 +17,14 @@ import timber.log.Timber
  * @param channelId Channel to send notification to
  * @param title Title in notification
  * @param message Message/Description of Notification
- * @param image Image in Notification tray
+ * @param bitmapImage Image in Notification tray
  */
 fun triggerNotification(
     appContext: Context,
     channelId: String,
     title: String,
     message: String,
-    image: Bitmap?
+    bitmapImage: Bitmap?
 ) {
 
     val notificationId = SharedPrefUtils.getInstance(appContext).getNextNotificationId()
@@ -49,14 +48,15 @@ fun triggerNotification(
         PendingIntent.FLAG_UPDATE_CURRENT
     )
 
-    val largeIcon = image
+    //Not showing image when no image is sent from fcm
+    /*val largeIcon = image
         ?: BitmapFactory.decodeResource(
             appContext.resources,
             R.mipmap.ic_launcher_foreground
-        )
+        )*/
 
     val bigPicStyle = NotificationCompat.BigPictureStyle()
-        .bigPicture(largeIcon)
+        .bigPicture(bitmapImage)
         .bigLargeIcon(null)
 
     // Setting properties for notification
@@ -66,9 +66,13 @@ fun triggerNotification(
         .setContentTitle(title)
         .setContentText(message)
         .setAutoCancel(true)
-        .setStyle(bigPicStyle)
-        .setLargeIcon(largeIcon)
         .setContentIntent(contentPendingIntent)
+
+    //If no image is sent then, not setting the style
+    if (bitmapImage != null) {
+        builder.setStyle(bigPicStyle)
+            .setLargeIcon(bitmapImage)
+    }
 
     notificationManager.notify(notificationId, builder.build())
 }
