@@ -13,7 +13,7 @@ language. Aimed to be a toy app, recreated with latest AndroidX Components under
 Challenge.
 
 ## Features
-The app replicates the core funtions of popular messaging app, which are:
+The app replicates the core functions of popular messaging app, which are:
 - Splash segment
 - Camera segment
 - Chat segment
@@ -22,12 +22,16 @@ The app replicates the core funtions of popular messaging app, which are:
 - About segment
 
 ## Concepts used
-Based on AndroidX components. This app utilizes the following Jetpack libraries but not limited to:
+Based on AndroidX components. This app utilizes the following [Jetpack libraries](https://developer.android.com/jetpack/androidx/explorer) but not limited to:
+- CoordinatorLayout
 - DataBinding
 - Firebase Cloud Messaging
+- Fragment
+- Lifecycle
 - Material Design
 - Navigation Components
 - RecyclerView
+- VectorDrawable
 - ViewModel
 - ViewPager2
 
