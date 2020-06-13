@@ -2,14 +2,23 @@
 <resources>
     <color name="colorPrimary">#075E54</color>
     <color name="colorPrimaryDark">#004D40</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
     <color name="colorSecondary">#25D366</color>
-    <color name="colorOnSecondary">@color/colorWhite</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorBackground">@color/colorWhite</color>
+    <color name="colorOnBackground">@color/colorRed</color>
     <color name="colorAccent">#25D366</color>
+
+    <!--Custom Colors-->
     <color name="colorDeepOrange">#FF7043</color>
     <color name="colorRed">#F44336</color>
+    <color name="colorDarkGray">@android:color/darker_gray</color>
     <color name="colorWhite">@android:color/white</color>
     <color name="colorBlack">@android:color/black</color>
-    <color name="colorNotHighlighted">#B2DFDB</color>
+    <color name="colorNonHighlight">#B2DFDB</color>
     <color name="colorStatusBorder">#4DB6AC</color>
     <color name="colorLightGray">#F5F5F5</color>
+    <color name="colorOnText">@color/colorBlack</color>
+    <color name="colorOnView">@color/colorDarkGray</color>
+    <color name="colorViewBackground">@color/colorLightGray</color>
 </resources>

@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 app:title="@string/app_name"
-                app:titleTextColor="@color/colorWhite" />
+                app:titleTextColor="@color/colorOnPrimary" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <fragment

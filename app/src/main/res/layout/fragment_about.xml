@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_normal"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-        android:textColor="@color/colorNotHighlighted"
+        android:textColor="@color/colorNonHighlight"
         app:layout_constraintBottom_toTopOf="@+id/about_app_logo_image_view"
         app:layout_constraintEnd_toEndOf="@+id/about_app_name_text_view"
         app:layout_constraintStart_toStartOf="@+id/about_app_name_text_view"
@@ -49,7 +49,7 @@
         android:layout_marginTop="@dimen/margin_normal"
         android:text="@string/copyright_notice"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-        android:textColor="@color/colorNotHighlighted"
+        android:textColor="@color/colorNonHighlight"
         app:layout_constraintEnd_toEndOf="@+id/about_app_logo_image_view"
         app:layout_constraintStart_toStartOf="@+id/about_app_logo_image_view"
         app:layout_constraintTop_toBottomOf="@id/about_app_logo_image_view" />

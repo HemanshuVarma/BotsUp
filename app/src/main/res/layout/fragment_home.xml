@@ -22,11 +22,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tabIndicatorColor="@android:color/white"
+            app:tabIndicatorColor="@color/colorOnPrimary"
             app:tabIndicatorHeight="@dimen/tab_height"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/colorWhite"
-            app:tabTextColor="@color/colorNotHighlighted" />
+            app:tabSelectedTextColor="@color/colorOnPrimary"
+            app:tabTextColor="@color/colorNonHighlight" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/home_viewpager"
