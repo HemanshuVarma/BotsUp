@@ -50,6 +50,7 @@ class HomeFragment : Fragment() {
         val homeViewPagerAdapter =
             HomeViewPagerAdapter(requireActivity(), Constants.VIEW_PAGER_ITEMS_COUNT)
         binding.homeViewpager.apply {
+
             //Setting up adapter
             adapter = homeViewPagerAdapter
 
@@ -58,6 +59,9 @@ class HomeFragment : Fragment() {
 
             //Attaching page change callback
             registerOnPageChangeCallback(homePageChangeCallback)
+
+            //Not saving state of ViewPager Fragment
+            isSaveEnabled = false
 
             //Binding ViewPager with TabLayout to set names/icon
             TabLayoutMediator(binding.homeTabLayout, binding.homeViewpager) { tab, position ->
