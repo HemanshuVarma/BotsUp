@@ -65,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_normal"
                 android:text="@string/empty_view_message"
+                android:textColor="@color/colorOnPrimary"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
                 app:layout_constraintEnd_toEndOf="@id/empty_view_image"
                 app:layout_constraintStart_toStartOf="@id/empty_view_image"

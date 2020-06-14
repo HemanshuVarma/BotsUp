@@ -10,7 +10,6 @@
     <color name="colorAccent">#25D366</color>
 
     <!--Custom Colors-->
-    <color name="colorDeepOrange">#FF7043</color>
     <color name="colorRed">#F44336</color>
     <color name="colorDarkGray">@android:color/darker_gray</color>
     <color name="colorWhite">@android:color/white</color>

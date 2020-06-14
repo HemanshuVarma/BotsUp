@@ -31,6 +31,7 @@
             android:layout_marginTop="@dimen/margin_small"
             android:text="@string/calls_info"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textColor="@color/colorOnText"
             app:layout_constraintEnd_toEndOf="@+id/calls_anim"
             app:layout_constraintStart_toStartOf="@+id/calls_anim"
             app:layout_constraintTop_toBottomOf="@+id/calls_anim" />
