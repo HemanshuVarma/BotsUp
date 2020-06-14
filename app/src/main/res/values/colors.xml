@@ -19,6 +19,7 @@
     <color name="colorStatusBorder">#4DB6AC</color>
     <color name="colorLightGray">#F5F5F5</color>
     <color name="colorOnText">@color/colorBlack</color>
+    <color name="colorOnTextSecondary">@color/colorBlack</color>
     <color name="colorOnView">@color/colorDarkGray</color>
     <color name="colorViewBackground">@color/colorLightGray</color>
 </resources>

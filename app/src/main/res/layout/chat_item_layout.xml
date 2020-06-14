@@ -10,6 +10,7 @@
         android:id="@+id/chat_profile"
         android:layout_width="@dimen/profile_size"
         android:layout_height="@dimen/profile_size"
+        app:civ_border_color="@color/colorBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,7 +23,7 @@
         android:layout_marginStart="@dimen/margin_normal"
         android:layout_marginTop="@dimen/margin_small"
         android:fontFamily="@font/helvetica_neue_medium"
-        android:textColor="@color/colorOnText"
+        android:textColor="@color/colorOnTextSecondary"
         app:layout_constraintStart_toEndOf="@+id/chat_profile"
         app:layout_constraintTop_toTopOf="@+id/chat_profile"
         tools:text="Hemanshu Varma" />
