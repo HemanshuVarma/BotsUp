@@ -1,7 +1,7 @@
 # BotsUp
 [![Platform](https://img.shields.io/badge/Platform-android-green.svg)](http://developer.android.com/index.html)
 [![API](https://img.shields.io/badge/API-21%2B-green.svg?style=flat)](https://android-arsenal.com/api?level=21)
-[![App Version](https://img.shields.io/badge/Version-1.0.0-green)](http://bit.ly/BotsUpAndroid)
+[![App Version](https://img.shields.io/badge/Version-1.1.0-green)](http://bit.ly/BotsUpAndroid)
 [![GitHub stars](https://img.shields.io/github/stars/HemanshuVarma/BotsUp?label=Stargazers)](https://github.com/HemanshuVarma/BotsUp/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/HemanshuVarma/BotsUp?label=Forks)](https://github.com/HemanshuVarma/BotsUp/network/members)
 [![Twitter](https://img.shields.io/badge/Twitter-@varmahemanshu-blue.svg?style=flat)](http://twitter.com/varmahemanshu)
@@ -37,9 +37,15 @@ Based on AndroidX components. This app utilizes the following [Jetpack libraries
 
 ## Screenshots
 
-![Screenshot 1](https://user-images.githubusercontent.com/36810824/84051481-d8909d00-a9cc-11ea-9794-e0bcdff3ca21.jpg)
+### Light Theme
+![Light Theme Screenshot 1](https://user-images.githubusercontent.com/36810824/84051481-d8909d00-a9cc-11ea-9794-e0bcdff3ca21.jpg)
 
-![Screenshot 2](https://user-images.githubusercontent.com/36810824/84051488-dcbcba80-a9cc-11ea-94bc-5f6397432a5d.jpg)
+![Light Theme Screenshot 2](https://user-images.githubusercontent.com/36810824/84051488-dcbcba80-a9cc-11ea-94bc-5f6397432a5d.jpg)
+
+### Dark Theme
+![Dark Theme Screenshot 1](https://github.com/HemanshuVarma/BotsUp/blob/master/screenshots/DarkTheme_Screenshot-1.jpg)
+
+![Dark Theme Screenshot 2](https://github.com/HemanshuVarma/BotsUp/blob/master/screenshots/DarkTheme_Screenshot-2.jpg)
 
 ## Dependencies
 - [CircularImageView](https://github.com/lopspower/CircularImageView)
