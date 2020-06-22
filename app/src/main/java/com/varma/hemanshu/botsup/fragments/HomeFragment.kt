@@ -40,12 +40,6 @@ class HomeFragment : Fragment() {
         //Setting Overflow menu
         setHasOptionsMenu(true)
 
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
         //Reference to ViewPager
         val homeViewPagerAdapter =
             HomeViewPagerAdapter(requireActivity(), Constants.VIEW_PAGER_ITEMS_COUNT)
@@ -60,14 +54,16 @@ class HomeFragment : Fragment() {
             //Attaching page change callback
             registerOnPageChangeCallback(homePageChangeCallback)
 
-            //Not saving state of ViewPager Fragment
-            isSaveEnabled = false
+            //Saving state of ViewPager Fragment(s)
+            isSaveEnabled = true
 
             //Binding ViewPager with TabLayout to set names/icon
             TabLayoutMediator(binding.homeTabLayout, binding.homeViewpager) { tab, position ->
                 tab.text = resources.getStringArray(R.array.homepage_screen_names)[position]
             }.attach()
         }
+
+        return binding.root
     }
 
     //Inflating overflow menu

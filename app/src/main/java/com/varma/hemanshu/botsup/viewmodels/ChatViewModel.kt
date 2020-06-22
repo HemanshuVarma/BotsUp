@@ -22,7 +22,7 @@ class ChatViewModel : ViewModel() {
     private var count = 0
 
     init {
-        Timber.i("ViewModel created")
+        Timber.i("viewModel Created")
     }
 
     //Invoked when FAB is clicked. Method which increments the item count by one and adds to list
@@ -36,6 +36,6 @@ class ChatViewModel : ViewModel() {
 
     override fun onCleared() {
         super.onCleared()
-        Timber.i("viewModel cleared")
+        Timber.i("viewModel Cleared")
     }
 }
