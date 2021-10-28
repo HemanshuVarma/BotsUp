@@ -1,0 +1,25 @@
+apply plugin: "org.sonarqube"
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "BotsUp Android"
+        property "sonar.projectKey", "2ed5425a242226b8ff4fa219cc68bd4c6108688b"
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.exclusions", "**/test/**," +
+                "**/androidTest/**," +
+                "**/R.class," +
+                "**/BuildConfig.*," +
+                "**/Manifest*.*," +
+                "**/*Test*.*," +
+                "**/android/databinding/*," +
+                "**/androidx/databinding/*," +
+                "**/*MapperImpl*.*," +
+                "**/BuildConfig.*," +
+                "**/*Component*.*," +
+                "**/*BR*.*," +
+                "**/Manifest*.*," +
+                "**/*Companion*.*," +
+                "**/*_Factory*.*," +
+                "**/google-services.json"
+    }
+}
